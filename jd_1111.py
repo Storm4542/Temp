@@ -10,8 +10,8 @@ cron 0 * * * *
 
 
 cookies1 = {
-    'pt_key': '',
-    'pt_pin': '',
+    'pt_key': 'AAJfh2ZGADCiweWxrYqM-ONiFj7CAesG6sCRpYZpUtD7Vs19Ukh9B05EHgd-Lg2owM92QhRisW4',
+    'pt_pin': 'jd_6162cd8a30268',
 }
 
 
