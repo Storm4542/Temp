@@ -22,3 +22,5 @@ jobs:
         
       - name: 'run 全民营业自动收金币' 
         run: python3 jd_1111.py
+        env:
+            JD_COOKIE: ${{ secrets.JD_COOKIE }}
