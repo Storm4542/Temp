@@ -2,7 +2,7 @@ name: jd_1111
 
 on:
   schedule:
-    - cron: '0 */1 * * * '
+    - cron: '0/30 * * *'
   watch:
     types: [started]
 jobs:
