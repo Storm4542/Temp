@@ -1,6 +1,6 @@
 import requests
 import json
-# import jdCookie
+import jdCookie
 """
 https://wbbny.m.jd.com/babelDiy/Zeus/4SJUHwGdUQYgg94PFzjZZbGZRjDd/index.html#/home
 
@@ -14,8 +14,6 @@ cookies1 = {
     'pt_pin': '',
 }
 
-
-cookiesList = [cookies1]
 headers = {
     'User-Agent': 'jdapp;iPhone;9.2.0;14.1;;network/wifi;Mozilla/5.0 (iPhone; CPU iPhone OS 14_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148;supportJDSHWK/1',
     'Content-Type': 'application/x-www-form-urlencoded',
@@ -59,7 +57,7 @@ def collectProduceScore(cookies):
     print("收集金币: ", coin)
 
 
-for cookies in cookiesList:
+for cookies in jdCookie.get_cookies():
     print(f"""[ {cookies["pt_pin"]} ]""")
     collectProduceScore(cookies)
     print("\n")
