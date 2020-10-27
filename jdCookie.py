@@ -3,7 +3,6 @@ import json
 import time
 import os
 import re
-import notification
 
 """
 1、抓包，登录 https://bean.m.jd.com 点击签到并且出现签到日历后
@@ -14,7 +13,6 @@ import notification
 集中cookie管理
 多账号准备
 过期检查
-需要推送通知的，修改notification.py
 """
 
 ###############################
@@ -65,8 +63,6 @@ def valid(cookies):
                             headers=headers, params=params, cookies=cookies)
     if response.json()["code"] == "3":
         print(f"""## {cookies["pt_pin"]}: cookie过期""")
-        notification.notify(
-            f"""## 京东账号【{cookies["pt_pin"]}】 cookie过期""", f"""## 账号【{cookies["pt_pin"]}】 cookie过期 ，及时修改""")
         return False
     return True
 
